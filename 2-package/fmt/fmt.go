@@ -23,4 +23,12 @@ func main() {
 	var school = "UIT"
 	edu := fmt.Sprintf("University of Information Technology! | %s ", school)
 	fmt.Println(edu)
+
+	var city string
+	var street string
+	var District string
+	fmt.Println("Nhập đường quận và thành phố của bạn:")
+	fmt.Scan(&street, &District, &city)
+	addressDetail := fmt.Sprintf("Street: %v \n District: %s \n, City: %s", street, District, city)
+	fmt.Println(addressDetail)
 }
