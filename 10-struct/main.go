@@ -8,6 +8,10 @@ type Employee struct {
 	gender              bool
 }
 
+func showInfomation(e Employee) {
+	fmt.Printf("First Name: %s \nLast Name: %s\n Age %d\n", e.firstName, e.lastName, e.age)
+}
+
 func main() {
 
 	employee1 := Employee{
@@ -16,6 +20,6 @@ func main() {
 		gender:    true,
 		age:       19,
 	}
-
 	fmt.Println(employee1)
+	showInfomation(employee1)
 }
