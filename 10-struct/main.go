@@ -8,7 +8,7 @@ type Employee struct {
 	gender              bool
 }
 
-func showInfomation(e Employee) {
+func (e Employee) showInfomation() {
 	fmt.Printf("First Name: %s \nLast Name: %s\n Age %d\n", e.firstName, e.lastName, e.age)
 }
 
@@ -21,5 +21,5 @@ func main() {
 		age:       19,
 	}
 	fmt.Println(employee1)
-	showInfomation(employee1)
+	employee1.showInfomation()
 }
