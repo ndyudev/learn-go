@@ -20,6 +20,10 @@ func (s *Student) deleteStudent() {
 	s.gender = false
 }
 
+func (s *Student) updateStudent() {
+
+}
+
 func main() {
 	fmt.Println("--- Struct Tag ---")
 
