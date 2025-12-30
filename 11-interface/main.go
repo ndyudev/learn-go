@@ -35,7 +35,11 @@ func main() {
 		name: "Dyu",
 		age:  20,
 	}
-	u1 := User{}
+	u1 := User{
+		id: "2"
+		name: "trh"
+		age: 19
+	}
 
 	u2.read()
 	u1.read()
