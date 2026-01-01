@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"learn-go/11-interface/cat"
+	dog "learn-go/11-interface/dog"
+)
 
 type UserDAO interface {
 	create() string
@@ -8,6 +12,16 @@ type UserDAO interface {
 	update() string
 	findById() string
 	read()
+}
+
+type Animal interface {
+	Speak() string
+	GetName() string
+}
+
+func MakeSound(a Animal) {
+	fmt.Println(a.GetName())
+	fmt.Println(a.Speak())
 }
 
 type User struct {
@@ -36,17 +50,25 @@ func main() {
 		age:  20,
 	}
 	u1 := User{
-		id: "2"
-		name: "trh"
-		age: 19
+		id:   "2",
+		name: "trh",
+		age:  19,
 	}
-    u3 := User{
-		id: "3"
-		name: "huyen tra"
-		age: 19
+	u3 := User{
+		id:   "3",
+		name: "huyen tra",
+		age:  19,
 	}
+
+	dogPet := dog.New("Bully")
+
+	catPet := cat.NewCat("")
+	fmt.Println(dogPet.Speak())
+	fmt.Println(catPet.Speak())
 	u2.read()
 	u1.read()
 	u3.read()
+
+	MakeSound(dogPet)
 
 }
