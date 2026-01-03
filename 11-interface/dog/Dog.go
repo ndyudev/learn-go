@@ -5,9 +5,9 @@ type Dog struct {
 }
 
 // create a constructor for Dog
-func New(name string) *Dog {
+func New(name *string) *Dog {
 	return &Dog{
-		Name: name,
+		Name: *name,
 	}
 }
 
