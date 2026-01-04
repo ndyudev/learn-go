@@ -6,6 +6,10 @@ import (
 	dog "learn-go/11-interface/dog"
 )
 
+func PrintValue(value any) {
+	fmt.Println("Value:", value)
+}
+
 type UserDAO interface {
 	create() string
 	detele() string
@@ -71,4 +75,8 @@ func main() {
 
 	MakeSound(dogPet)
 
+	PrintValue("2")
+	var name any = 10
+	number := name
+	fmt.Println(number)
 }
